@@ -106,7 +106,6 @@
   background: #0D0407;
   display: flex; align-items: center; justify-content: center;
   position: relative; overflow: hidden;
-  padding: 0;
 }
 .hw-bg {
   position: absolute; inset: 0;
@@ -127,23 +126,26 @@
 }
 .hw-inner {
   position: relative; z-index: 2;
-  width: 100%; text-align: center;
-  padding: 10rem 4rem 7rem;
-  display: flex; flex-direction: column;
-  align-items: center; gap: 1.5rem;
+  max-width: 1200px; width: 100%; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 6rem; align-items: center;
+  padding: 7rem 4rem;
 }
+.hw-visual { /* empty left column — background image shows through */ }
+.hw-content { /* right column — text */ }
 .hw-label {
   font-size: .68rem; letter-spacing: .26em; text-transform: uppercase;
-  color: var(--coral);
+  color: var(--coral); margin-bottom: 1.25rem; display: block;
 }
 .hw-title {
-  font-size: clamp(5rem, 13vw, 13rem);
-  font-weight: 900; line-height: .88; letter-spacing: -.04em;
-  color: var(--cream);
+  font-size: clamp(4rem, 9vw, 8.5rem);
+  font-weight: 900; line-height: .92; letter-spacing: -.03em;
+  color: var(--cream); margin-bottom: 1.5rem;
 }
 .hw-caption {
-  font-size: 1rem; line-height: 1.7;
-  color: rgba(255,248,224,.5); max-width: 460px;
+  font-size: 1.05rem; line-height: 1.7;
+  color: rgba(255,248,224,.55); max-width: 420px;
+  margin-bottom: 2.25rem;
 }
 
 /* ─── MISSION ───────────────────────────────────────────── */
@@ -251,7 +253,9 @@
   #ubiq        { padding: 6rem 1.5rem; }
   #mission     { padding: 7rem 1.5rem; }
   #partnerships { padding: 6rem 1.5rem; }
-  .hw-title    { font-size: clamp(3.5rem, 11vw, 9rem); }
+  .hw-inner    { grid-template-columns: 1fr; gap: 3rem; padding: 4rem 1.5rem; }
+  .hw-visual   { display: none; }
+  #hardware    { padding: 6rem 0; }
 }
 @media (max-width: 560px) {
   .hero-btns       { flex-direction: column; align-items: center; }

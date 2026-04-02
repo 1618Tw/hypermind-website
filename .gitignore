@@ -1,10 +1,6 @@
 # Large video source files
 assets/*.mp4
 
-# Extracted frame sequences (large — regenerate with ffmpeg if needed)
-assets/frames-workstation/
-assets/frames-server/
-
 # Screenshots
 assets/Screenshot*.png
 assets/Gemini_Generated_Image*.png
