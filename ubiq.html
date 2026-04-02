@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UBIQ — Hypermind</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,100..900;1,75..125,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/ubiq.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════════ -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="Hypermind" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#lab">LAB</a></li>
+    <li><a href="index.html#open-roles">Open Roles</a></li>
+    <li><a href="hardware.html">Hardware</a></li>
+    <li><a href="ubiq.html" class="active">UBIQ</a></li>
+  </ul>
+  <button class="btn-nav" onclick="openModal()">Contact Us</button>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════
+     HERO — VIDEO BACKGROUND
+═══════════════════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-video-wrap">
+    <video autoplay loop muted playsinline
+      src="assets/26_02_27- Ubiq video (final words + no flashlights).mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-content">
+    <span class="hero-eyebrow">001 / Product — Your Local AI</span>
+    <h1 class="hero-title">UBIQ.<br><em>Everywhere.</em></h1>
+    <p class="hero-sub">
+      Sovereign AI that lives on your devices — not in someone else's cloud.
+      Private by design. Powerful by nature. Truly yours.
+    </p>
+    <div class="hero-btns">
+      <button class="btn-primary">Try UBIQ Now</button>
+      <button class="btn-outline" onclick="scrollTo('what')">Learn More</button>
+    </div>
+  </div>
+
+  <div class="scroll-hint" onclick="scrollTo('what')">
+    <span>Scroll</span>
+    <div class="scroll-chevron"></div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     POWERED BY — infinite marquee
+═══════════════════════════════════════════════════ -->
+<div id="powered">
+  <div class="powered-inner">
+    <span class="powered-label">Powered by the best</span>
+    <div class="marquee-clip">
+      <div class="marquee-track">
+        <img src="assets/bpifrance.png" alt="BPI France"  class="sponsor-img" />
+        <img src="assets/f40.png"        alt="Future 40"   class="sponsor-img" />
+        <img src="assets/galion.avif"    alt="Galion"      class="sponsor-img" />
+        <img src="assets/nvidia.png"     alt="NVIDIA"      class="sponsor-img" />
+        <img src="assets/scaleway.png"   alt="Scaleway"    class="sponsor-img" />
+        <img src="assets/stationf.png"   alt="Station F"   class="sponsor-img" />
+        <!-- Duplicate for seamless loop -->
+        <img src="assets/bpifrance.png" alt="BPI France"  class="sponsor-img" />
+        <img src="assets/f40.png"        alt="Future 40"   class="sponsor-img" />
+        <img src="assets/galion.avif"    alt="Galion"      class="sponsor-img" />
+        <img src="assets/nvidia.png"     alt="NVIDIA"      class="sponsor-img" />
+        <img src="assets/scaleway.png"   alt="Scaleway"    class="sponsor-img" />
+        <img src="assets/stationf.png"   alt="Station F"   class="sponsor-img" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════
+     WHAT IS UBIQ
+═══════════════════════════════════════════════════ -->
+<section id="what">
+  <div class="what-inner">
+    <div class="what-left">
+      <span class="section-tag r">002 / What is UBIQ</span>
+      <h2 class="what-title r d1">The AI that<br>follows <em style="color:var(--coral);font-style:normal;">you</em>.</h2>
+      <p class="what-body r d2">
+        UBIQ is Hypermind's local intelligence platform — a sovereign AI engine
+        that runs entirely on your hardware. No subscriptions to third-party clouds,
+        no data sent anywhere. Just raw, private intelligence aligned to your rules.
+      </p>
+      <p class="what-body r d3" style="margin-top:-.75rem;">
+        Deploy on any device. Customise every behaviour. Own every output.
+        UBIQ puts Local Intelligence where it belongs — with you.
+      </p>
+      <div class="r d4">
+        <button class="btn-primary">Try UBIQ Now</button>
+      </div>
+    </div>
+    <div class="what-right r-r">
+      <div class="what-ring"></div>
+      <img src="assets/ubiq.png" alt="UBIQ" />
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     FEATURES
+═══════════════════════════════════════════════════ -->
+<section id="features">
+  <div class="features-header">
+    <div>
+      <span class="section-tag r">003 / Capabilities</span>
+      <h2 class="features-title r d1">Built different,<br>from the ground up.</h2>
+    </div>
+    <p class="features-sub r d2">
+      Every design decision in UBIQ starts from one principle:
+      your AI should serve you, not surveil you.
+    </p>
+  </div>
+
+  <div class="features-grid">
+    <div class="feat-card r">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <span class="feat-num">01</span>
+      <h3 class="feat-title">100% Private</h3>
+      <p class="feat-body">Your data never leaves your device. No telemetry, no logging, no silent uploads. What happens in UBIQ stays in UBIQ.</p>
+    </div>
+    <div class="feat-card r d1">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+      </div>
+      <span class="feat-num">02</span>
+      <h3 class="feat-title">Any Device</h3>
+      <p class="feat-body">Laptop, workstation, edge server — UBIQ adapts to your hardware and runs optimally on everything from consumer GPUs to enterprise clusters.</p>
+    </div>
+    <div class="feat-card r d2">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      </div>
+      <span class="feat-num">03</span>
+      <h3 class="feat-title">Fully Customisable</h3>
+      <p class="feat-body">Fine-tune models, set your own system prompts, define custom tools. UBIQ is a foundation you build on — not a black box you submit to.</p>
+    </div>
+    <div class="feat-card r d3">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
+      <span class="feat-num">04</span>
+      <h3 class="feat-title">No Latency</h3>
+      <p class="feat-body">Skip the round-trip to a distant data centre. Local inference means sub-second responses, even when you're offline or air-gapped.</p>
+    </div>
+    <div class="feat-card r d4">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <span class="feat-num">05</span>
+      <h3 class="feat-title">Open Stack</h3>
+      <p class="feat-body">Built on open standards. Bring your own models, integrate with your existing tools, and stay independent of any single provider forever.</p>
+    </div>
+    <div class="feat-card r d5">
+      <div class="feat-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </div>
+      <span class="feat-num">06</span>
+      <h3 class="feat-title">Team-Ready</h3>
+      <p class="feat-body">Deploy UBIQ across your organisation with role-based access, shared knowledge bases, and centralised configuration — all on-prem.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     HOW IT WORKS
+═══════════════════════════════════════════════════ -->
+<section id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <span class="section-tag r">004 / How It Works</span>
+      <h2 class="how-title r d1">Up and running<br>in minutes.</h2>
+    </div>
+    <div class="steps">
+      <div class="step r">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Install</h3>
+        <p class="step-body">Download UBIQ for your OS. The installer handles model weights, drivers, and dependencies automatically — no DevOps experience needed.</p>
+      </div>
+      <div class="step r d1">
+        <div class="step-num">02</div>
+        <h3 class="step-title">Configure</h3>
+        <p class="step-body">Choose your model, set your system context, connect your private data sources. UBIQ's dashboard makes customisation intuitive.</p>
+      </div>
+      <div class="step r d2">
+        <div class="step-num">03</div>
+        <h3 class="step-title">Use — Anywhere</h3>
+        <p class="step-body">Access UBIQ through the desktop app, browser extension, or API. Your sovereign AI is now available everywhere you work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CTA BAND
+═══════════════════════════════════════════════════ -->
+<section id="cta">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2 class="cta-title r">Ready to own<br>your AI?</h2>
+      <p class="cta-sub r d1">Join the teams who have taken back control of their intelligence. Start with UBIQ today — no cloud, no compromise.</p>
+    </div>
+    <div class="r d2">
+      <button class="btn-cta-dark">Try UBIQ Now</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" class="footer-brand-logo" alt="Hypermind" />
+        <p>Building sovereign intelligence for the ones who refuse to let others own their data, their future, their AI.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="index.html#lab">LAB</a></li>
+          <li><a href="index.html#open-roles">Open Roles</a></li>
+          <li><a href="index.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="ubiq.html">UBIQ</a></li>
+          <li><a href="hardware.html">Hardware</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@hypermind.ai">hello@hypermind.ai</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-big">
+      <svg id="footer-svg" viewBox="0 0 1000 160" xmlns="http://www.w3.org/2000/svg"
+           onmouseenter="fhOn(true)" onmouseleave="fhOn(false)" onmousemove="fhMove(event)">
+        <defs>
+          <radialGradient id="fhReveal" gradientUnits="userSpaceOnUse" r="240" cx="500" cy="80">
+            <stop offset="0%"   stop-color="white"/>
+            <stop offset="100%" stop-color="black"/>
+          </radialGradient>
+          <mask id="fhMask">
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#fhReveal)"/>
+          </mask>
+          <linearGradient id="fhGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#FF6B4B"/>
+            <stop offset="50%"  stop-color="#FFA886"/>
+            <stop offset="100%" stop-color="#FF6B4B"/>
+          </linearGradient>
+        </defs>
+        <text x="50%" y="75%" text-anchor="middle" dominant-baseline="middle"
+              font-size="145" font-weight="900" font-family="Archivo,sans-serif"
+              fill="none" stroke="rgba(255,248,224,.055)" stroke-width="0.5" letter-spacing="-3">HYPERMIND</text>
+        <text id="fh-hover" x="50%" y="75%" text-anchor="middle" dominant-baseline="middle"
+              font-size="145" font-weight="900" font-family="Archivo,sans-serif"
+              fill="none" stroke="url(#fhGrad)" stroke-width="0.5"
+              mask="url(#fhMask)" opacity="0" letter-spacing="-3"
+              style="transition: opacity .3s">HYPERMIND</text>
+      </svg>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Hypermind. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CONTACT MODAL
+═══════════════════════════════════════════════════ -->
+<div class="modal-bg" id="modal-bg" onclick="closeModalOut(event)">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal()">×</button>
+    <h2>Let's Talk.</h2>
+    <p>Tell us about your project and we'll get back to you shortly.</p>
+    <form onsubmit="sendForm(event)">
+      <div class="form-row">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Doe" required />
+      </div>
+      <div class="form-row">
+        <label>Email</label>
+        <input type="email" placeholder="you@company.com" required />
+      </div>
+      <div class="form-row">
+        <label>Message</label>
+        <textarea placeholder="What are you working on?" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;margin-top:.5rem;">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

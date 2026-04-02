@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hardware — Hypermind</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,100..900;1,75..125,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/hardware.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════
+     NAVBAR
+══════════════════════════════ -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/logo.png" alt="Hypermind" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#lab">LAB</a></li>
+    <li><a href="index.html#open-roles">Open Roles</a></li>
+    <li><a href="hardware.html" class="active">Hardware</a></li>
+    <li><a href="ubiq.html">UBIQ</a></li>
+  </ul>
+  <button class="btn-nav" onclick="openModal()">Contact Us</button>
+</nav>
+
+
+<!-- ══════════════════════════════
+     HERO — GEOMETRIC SHAPES
+══════════════════════════════ -->
+<section id="hero">
+  <!-- Ambient gradient -->
+  <div class="hero-ambient"></div>
+
+  <!-- Floating pill shapes -->
+  <div class="shapes-wrap" id="shapesWrap">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+    <div class="shape shape-5"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="hero-inner">
+    <div class="hero-badge" style="opacity:0;animation:fadeUp .7s ease forwards .4s">
+      <span class="badge-dot"></span>
+      <span>Sovereign AI Hardware</span>
+    </div>
+
+    <h1 class="hero-title" style="opacity:0;animation:fadeUp .9s ease forwards .65s">
+      Built to<br><em>Own.</em>
+    </h1>
+
+    <p class="hero-sub" style="opacity:0;animation:fadeUp .9s ease forwards .9s">
+      Hardware engineered from the ground up for local AI.<br>
+      No cloud. No compromise. Full sovereignty.
+    </p>
+  </div>
+
+  <!-- Scroll arrow -->
+  <div class="scroll-hint" onclick="document.getElementById('workstation').scrollIntoView({behavior:'smooth'})">
+    <span>Scroll</span>
+    <div class="scroll-chevron"></div>
+  </div>
+
+  <!-- Bottom fade -->
+  <div class="hero-fade-bottom"></div>
+</section>
+
+
+<!-- ══════════════════════════════
+     WORKSTATION — EXPLODE VIDEO
+══════════════════════════════ -->
+<section id="workstation">
+
+  <!-- Sticky scroll container — video scrubs while pinned -->
+  <div class="explode-pin" id="explodePin">
+    <div class="explode-inner">
+
+      <canvas id="wsCanvas" class="seq-canvas"></canvas>
+
+      <!-- Info overlay — sits on top of the video at the bottom -->
+      <div class="ws-info" id="wsInfo">
+        <div class="ws-info-inner">
+          <h2 class="hw-product-title">AI Workstation</h2>
+          <p class="hw-product-body">
+            A local AI workstation designed by Hypermind for small teams of 2–30 people.
+            Run high-performing models, AI agents, and development tools entirely on-premise.
+            No cloud dependency, no data leaving your walls.
+          </p>
+          <ul class="hw-bullets">
+            <li>On premise</li>
+            <li>Fully secured</li>
+            <li>Customizable</li>
+          </ul>
+          <p class="hw-product-body">
+            If you're interested, let's have a chat to see how this technology can fit your needs.
+          </p>
+          <button class="btn-outline-dark" onclick="openModal()">Request a Demo</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════
+     PRIVATE AI SERVERS — scroll-scrub video (reverse)
+══════════════════════════════ -->
+<section id="servers">
+
+  <!-- Sticky pin — same pattern as workstation -->
+  <div class="srv-pin" id="srvPin">
+    <div class="srv-pin-inner">
+
+      <canvas id="srvCanvas" class="seq-canvas"></canvas>
+
+      <!-- Reveal panel: info only, same layout as workstation -->
+      <div class="srv-reveal" id="srvReveal">
+        <div class="ws-info-inner">
+          <h2 class="hw-product-title">Private AI Servers</h2>
+          <p class="hw-product-body">
+            For organizations that need to scale. We deploy and optimize AI inference
+            infrastructure on your own servers, multi-GPU racks built for throughput,
+            reliability, and full data sovereignty.
+          </p>
+          <ul class="hw-bullets">
+            <li>Multi-GPU rack servers</li>
+            <li>Optimized inference engines</li>
+            <li>Full data sovereignty</li>
+            <li>Scalable to your needs</li>
+          </ul>
+          <p class="hw-product-body">
+            Whether you're running RAG pipelines, coding assistants, or custom AI
+            applications, we'll help you find the right configuration and get the
+            most out of such infrastructure.
+          </p>
+          <button class="btn-primary" onclick="openModal()">Contact Us</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ══════════════════════════════
+     FOOTER
+══════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" class="footer-brand-logo" alt="Hypermind" />
+        <p>Building sovereign intelligence for the ones who refuse to let others own their data, their future, their AI.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="index.html#lab">LAB</a></li>
+          <li><a href="index.html#open-roles">Open Roles</a></li>
+          <li><a href="index.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="ubiq.html">UBIQ</a></li>
+          <li><a href="hardware.html">Hardware</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@hypermind.ai">hello@hypermind.ai</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-big">
+      <svg id="footer-svg" viewBox="0 0 1000 160" xmlns="http://www.w3.org/2000/svg"
+           onmouseenter="fhOn(true)" onmouseleave="fhOn(false)" onmousemove="fhMove(event)">
+        <defs>
+          <radialGradient id="fhReveal" gradientUnits="userSpaceOnUse" r="240" cx="500" cy="80">
+            <stop offset="0%"   stop-color="white"/>
+            <stop offset="100%" stop-color="black"/>
+          </radialGradient>
+          <mask id="fhMask">
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#fhReveal)"/>
+          </mask>
+          <linearGradient id="fhGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#FF6B4B"/>
+            <stop offset="50%"  stop-color="#FFA886"/>
+            <stop offset="100%" stop-color="#FF6B4B"/>
+          </linearGradient>
+        </defs>
+        <text x="50%" y="75%" text-anchor="middle" dominant-baseline="middle"
+              font-size="145" font-weight="900" font-family="Archivo,sans-serif"
+              fill="none" stroke="rgba(255,248,224,.055)" stroke-width="0.5" letter-spacing="-3">HYPERMIND</text>
+        <text id="fh-hover" x="50%" y="75%" text-anchor="middle" dominant-baseline="middle"
+              font-size="145" font-weight="900" font-family="Archivo,sans-serif"
+              fill="none" stroke="url(#fhGrad)" stroke-width="0.5"
+              mask="url(#fhMask)" opacity="0" letter-spacing="-3"
+              style="transition: opacity .3s">HYPERMIND</text>
+      </svg>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Hypermind. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════
+     CONTACT MODAL
+══════════════════════════════ -->
+<div class="modal-bg" id="modal-bg" onclick="closeModalOut(event)">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal()">×</button>
+    <h2>Let's Talk.</h2>
+    <p>Tell us about your project and we'll get back to you shortly.</p>
+    <form onsubmit="sendForm(event)">
+      <div class="form-row">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Doe" required />
+      </div>
+      <div class="form-row">
+        <label>Email</label>
+        <input type="email" placeholder="you@company.com" required />
+      </div>
+      <div class="form-row">
+        <label>Message</label>
+        <textarea placeholder="What are you working on?" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;margin-top:.5rem;">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/hardware.js"></script>
+</body>
+</html>

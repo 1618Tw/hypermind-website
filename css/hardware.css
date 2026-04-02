@@ -1,0 +1,339 @@
+/* ═══════════════════════════════════════════════════════════
+   HYPERMIND — Hardware Page Styles  (hardware.html only)
+═══════════════════════════════════════════════════════════ */
+
+/* ─── HERO ──────────────────────────────────────────────── */
+#hero {
+  position: relative;
+  min-height: 100svh;
+  background: #05010A; /* near-black with a tiny violet cast */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Soft ambient glow — coral bottom-left, muted violet top-right */
+.hero-ambient {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 15% 85%, rgba(255,107,75,.09) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 50% at 80% 10%, rgba(120,40,80,.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Bottom fade to workstation section */
+.hero-fade-bottom {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 18vh;
+  background: linear-gradient(to bottom, transparent, #05010A);
+  pointer-events: none; z-index: 5;
+}
+
+/* ── Floating pill shapes ── */
+.shapes-wrap {
+  position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+}
+.shape {
+  position: absolute; border-radius: 9999px;
+  border: 1.5px solid rgba(255,248,224,.1);
+  background: linear-gradient(135deg, rgba(255,248,224,.05) 0%, transparent 70%);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 8px 32px rgba(255,255,255,.04);
+  opacity: 0;
+  animation: shapeIn 2.4s cubic-bezier(0.23,0.86,0.39,0.96) forwards,
+             shapeBob var(--bob-dur, 12s) ease-in-out var(--bob-delay, 0s) infinite;
+}
+/* coral tint on two shapes */
+.shape-1 {
+  width: 580px; height: 135px;
+  top: 20%; left: -8%;
+  transform: rotate(12deg) translateY(-120px);
+  background: linear-gradient(135deg, rgba(255,107,75,.1) 0%, transparent 70%);
+  --bob-dur: 12s; --bob-delay: 0s;
+  animation-delay: .3s, 2.7s;
+}
+.shape-2 {
+  width: 480px; height: 115px;
+  top: 74%; right: -4%;
+  transform: rotate(-15deg) translateY(-120px);
+  background: linear-gradient(135deg, rgba(180,50,80,.1) 0%, transparent 70%);
+  --bob-dur: 11s; --bob-delay: .8s;
+  animation-delay: .5s, 2.9s;
+}
+.shape-3 {
+  width: 290px; height: 75px;
+  bottom: 9%; left: 8%;
+  transform: rotate(-8deg) translateY(-120px);
+  background: linear-gradient(135deg, rgba(255,168,134,.08) 0%, transparent 70%);
+  --bob-dur: 14s; --bob-delay: 1.2s;
+  animation-delay: .4s, 2.8s;
+}
+.shape-4 {
+  width: 190px; height: 55px;
+  top: 14%; right: 20%;
+  transform: rotate(20deg) translateY(-120px);
+  background: linear-gradient(135deg, rgba(255,107,75,.07) 0%, transparent 70%);
+  --bob-dur: 10s; --bob-delay: 0.4s;
+  animation-delay: .6s, 3s;
+}
+.shape-5 {
+  width: 145px; height: 40px;
+  top: 8%; left: 26%;
+  transform: rotate(-25deg) translateY(-120px);
+  --bob-dur: 16s; --bob-delay: 1.5s;
+  animation-delay: .7s, 3.1s;
+}
+@keyframes shapeIn {
+  0%   { opacity: 0; }
+  30%  { opacity: 1; }
+  100% { opacity: 1; transform: rotate(var(--r,0deg)) translateY(0); }
+}
+/* Override transform-origin so rotation is kept */
+.shape-1 { --r: 12deg; }
+.shape-2 { --r: -15deg; }
+.shape-3 { --r: -8deg; }
+.shape-4 { --r: 20deg; }
+.shape-5 { --r: -25deg; }
+@keyframes shapeBob {
+  0%,100% { translate: 0 0; }
+  50%      { translate: 0 15px; }
+}
+
+/* ── Hero text ── */
+.hero-inner {
+  position: relative; z-index: 10;
+  text-align: center; max-width: 700px;
+  padding: 0 2rem;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: .55rem;
+  padding: .35rem 1rem;
+  border: 1px solid rgba(255,248,224,.09);
+  background: rgba(255,248,224,.03);
+  border-radius: 9999px;
+  font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,248,224,.55);
+  margin-bottom: 2.5rem;
+}
+.badge-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--coral); flex-shrink: 0;
+}
+.hero-title {
+  font-size: clamp(4.5rem, 12vw, 10rem);
+  font-weight: 900; line-height: .9; letter-spacing: -.04em;
+  color: var(--cream); margin-bottom: 1.75rem;
+}
+.hero-title em { color: var(--coral); font-style: normal; }
+.hero-sub {
+  font-size: clamp(.95rem, 1.8vw, 1.15rem);
+  color: rgba(255,248,224,.42); line-height: 1.75;
+  font-weight: 300; letter-spacing: .02em;
+}
+
+/* Hero scroll hint — centered bottom */
+.scroll-hint {
+  bottom: 3rem; left: 50%; transform: translateX(-50%);
+  z-index: 10;
+  animation-delay: 1.3s !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   WORKSTATION — SCROLL-SCRUB VIDEO
+═══════════════════════════════════════════════════════════ */
+#workstation {
+  background: #05010A;
+}
+
+/* The pin wrapper: tall enough to give scroll travel for the video */
+.explode-pin {
+  position: sticky; top: 0;
+  height: 100vh; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  background: #05010A;
+  z-index: 1;
+}
+/* Scroll-travel height — 192 frames at ~20px per frame = ~3840px + 100vh */
+/* JS does not need to set this; it's driven by ScrollTrigger start/end */
+#workstation {
+  height: calc(100vh + 4000px);
+  position: relative;
+}
+
+.explode-inner {
+  position: relative;
+  width: 100%; height: 100%;
+}
+/* Canvas fills the sticky viewport — JS sets exact pixel dimensions */
+.seq-canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  display: block;
+}
+
+/* Subtle vignette */
+.explode-inner::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, rgba(5,1,10,.6) 100%);
+  pointer-events: none;
+}
+
+/* Section label that fades in when video nears end */
+.ws-label {
+  position: absolute; top: 2.5rem; left: 4rem; z-index: 3;
+  font-size: .68rem; letter-spacing: .26em; text-transform: uppercase;
+  color: var(--coral);
+  opacity: 0; transition: opacity .6s;
+}
+.ws-label.visible { opacity: 1; }
+
+/* ── Workstation Info Panel — overlaid on the sticky video ── */
+.ws-info {
+  /* Sits inside the sticky viewport, anchored to the bottom */
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 4;
+  opacity: 0;
+  padding: 0 4rem 5rem;
+  /* Gradient so text stays readable over any video frame */
+  background: linear-gradient(to top,
+    rgba(5,1,10,.88) 0%,
+    rgba(5,1,10,.6)  40%,
+    transparent      100%);
+  pointer-events: none; /* let scroll-through work */
+}
+/* Re-enable pointer events on interactive children */
+.ws-info button, .ws-info a { pointer-events: auto; }
+
+.ws-info-inner {
+  max-width: 860px; margin: 0 auto;
+}
+
+/* Force all text cream on dark video */
+.ws-info .hw-product-title {
+  color: var(--cream);
+  text-shadow: 0 2px 20px rgba(0,0,0,.4);
+}
+.ws-info .hw-product-body  { color: rgba(255,248,224,.65); }
+.ws-info .hw-bullets li    { color: rgba(255,248,224,.75); }
+.ws-info .hw-bullets li::before { background: var(--coral); }
+.ws-info .btn-outline-dark {
+  color: var(--cream); border-color: rgba(255,248,224,.35);
+}
+.ws-info .btn-outline-dark:hover {
+  background: rgba(255,248,224,.08); border-color: var(--cream);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SHARED PRODUCT TYPOGRAPHY (workstation + servers)
+═══════════════════════════════════════════════════════════ */
+.section-tag {
+  font-size: .68rem; letter-spacing: .26em; text-transform: uppercase;
+  color: var(--coral); display: block; margin-bottom: 1.25rem;
+}
+.hw-product-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 900; line-height: .95; letter-spacing: -.025em;
+  color: var(--dark); margin-bottom: 1.5rem;
+  text-transform: uppercase; letter-spacing: .1em;
+}
+/* On dark backgrounds (servers section) */
+.srv-content .hw-product-title { color: var(--cream); }
+.srv-content .hw-product-body  { color: rgba(255,248,224,.55); }
+.srv-content .hw-bullets li    { color: rgba(255,248,224,.7); }
+.srv-content .hw-bullets li::before { background: var(--coral); }
+
+.hw-product-body {
+  font-size: 1rem; line-height: 1.75;
+  color: rgba(57,8,30,.6);
+  margin-bottom: 1.75rem;
+}
+.hw-bullets {
+  list-style: none;
+  display: flex; flex-direction: column; gap: .65rem;
+  margin-bottom: 1.75rem;
+}
+.hw-bullets li {
+  font-size: .95rem; font-weight: 600;
+  color: rgba(57,8,30,.8);
+  display: flex; align-items: center; gap: .75rem;
+}
+.hw-bullets li::before {
+  content: '';
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--dark); flex-shrink: 0;
+}
+
+/* Outline button for cream backgrounds */
+.btn-outline-dark {
+  display: inline-flex; align-items: center; justify-content: center;
+  background: transparent; color: var(--dark);
+  border: 1px solid rgba(57,8,30,.4);
+  padding: .9rem 2.4rem; font-family: var(--font); font-size: .82rem;
+  font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  border-radius: 2px; transition: background .25s, border-color .25s;
+}
+.btn-outline-dark:hover { background: rgba(57,8,30,.06); border-color: var(--dark); }
+
+/* ═══════════════════════════════════════════════════════════
+   PRIVATE AI SERVERS — scroll-scrub sticky section
+═══════════════════════════════════════════════════════════ */
+#servers {
+  position: relative;
+  height: calc(100vh + 4000px);
+  background: #05010A;
+}
+
+/* Sticky pin — same mechanism as workstation */
+.srv-pin {
+  position: sticky; top: 0;
+  height: 100vh; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  background: #05010A;
+  z-index: 1;
+}
+.srv-pin-inner {
+  position: relative;
+  width: 100%; height: 100%;
+}
+
+/* Vignette — same as workstation */
+.srv-pin-inner::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 80% at 50% 50%, transparent 40%, rgba(5,1,10,.6) 100%);
+  pointer-events: none; z-index: 2;
+}
+
+/* ── Reveal panel: same position/size as .ws-info ── */
+.srv-reveal {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 4;
+  opacity: 0;
+  padding: 0 4rem 5rem;
+  background: linear-gradient(to top,
+    rgba(5,1,10,.88) 0%,
+    rgba(5,1,10,.6)  40%,
+    transparent      100%);
+  pointer-events: none;
+}
+.srv-reveal button, .srv-reveal a { pointer-events: auto; }
+
+/* Text colours — cream on dark video (same overrides as .ws-info) */
+.srv-reveal .hw-product-title { color: var(--cream); text-shadow: 0 2px 20px rgba(0,0,0,.4); }
+.srv-reveal .hw-product-body  { color: rgba(255,248,224,.65); }
+.srv-reveal .hw-bullets li    { color: rgba(255,248,224,.75); }
+.srv-reveal .hw-bullets li::before { background: var(--coral); }
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .ws-info   { padding: 0 1.6rem 4rem; }
+  .srv-reveal { padding: 0 1.6rem 4rem; }
+}
+@media (max-width: 560px) {
+  .hero-title { letter-spacing: -.03em; }
+}
