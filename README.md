@@ -1,3 +1,6 @@
+# Changes
+I have changed the hardware page with a more simple one because the animations are not ready yet. I have made the opne roles and lab page, still a draft but good to have it. Made some changes over the landing page, added more cream.
+
 # Hypermind Website
 
 Static website for **Hypermind** — Local Intelligence.  
