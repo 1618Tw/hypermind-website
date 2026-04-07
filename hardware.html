@@ -47,16 +47,16 @@
 
   <!-- Content -->
   <div class="hero-inner">
-    <div class="hero-badge" style="opacity:0;animation:fadeUp .7s ease forwards .4s">
+    <div class="hero-badge" style="opacity:0;animation:fadeUp .4s ease forwards .2s">
       <span class="badge-dot"></span>
       <span>Sovereign AI Hardware</span>
     </div>
 
-    <h1 class="hero-title" style="opacity:0;animation:fadeUp .9s ease forwards .65s">
+    <h1 class="hero-title" style="opacity:0;animation:fadeUp .5s ease forwards .35s">
       Built to<br><em>Own.</em>
     </h1>
 
-    <p class="hero-sub" style="opacity:0;animation:fadeUp .9s ease forwards .9s">
+    <p class="hero-sub" style="opacity:0;animation:fadeUp .5s ease forwards .5s">
       Hardware engineered from the ground up for local AI.<br>
       No cloud. No compromise. Full sovereignty.
     </p>
@@ -74,81 +74,67 @@
 
 
 <!-- ══════════════════════════════
-     WORKSTATION — EXPLODE VIDEO
+     WORKSTATION — STATIC BACKGROUND
 ══════════════════════════════ -->
 <section id="workstation">
-
-  <!-- Sticky scroll container — video scrubs while pinned -->
-  <div class="explode-pin" id="explodePin">
-    <div class="explode-inner">
-
-      <canvas id="wsCanvas" class="seq-canvas"></canvas>
-
-      <!-- Info overlay — sits on top of the video at the bottom -->
-      <div class="ws-info" id="wsInfo">
-        <div class="ws-info-inner">
-          <h2 class="hw-product-title">AI Workstation</h2>
-          <p class="hw-product-body">
-            A local AI workstation designed by Hypermind for small teams of 2–30 people.
-            Run high-performing models, AI agents, and development tools entirely on-premise.
-            No cloud dependency, no data leaving your walls.
-          </p>
-          <ul class="hw-bullets">
-            <li>On premise</li>
-            <li>Fully secured</li>
-            <li>Customizable</li>
-          </ul>
-          <p class="hw-product-body">
-            If you're interested, let's have a chat to see how this technology can fit your needs.
-          </p>
-          <button class="btn-outline-dark" onclick="openModal()">Request a Demo</button>
-        </div>
+  <div class="ws-bg"></div>
+  <div class="ws-overlay"></div>
+  <div class="ws-inner">
+    <div class="ws-content">
+      <span class="section-tag r">001 / Product</span>
+      <h2 class="hw-product-title r d1">AI Workstation</h2>
+      <p class="hw-product-body r d2">
+        A local AI workstation designed by Hypermind for small teams of 2–30 people.
+        Run high-performing models, AI agents, and development tools entirely on-premise.
+        No cloud dependency, no data leaving your walls.
+      </p>
+      <ul class="hw-bullets r d3">
+        <li>On premise</li>
+        <li>Fully secured</li>
+        <li>Customizable</li>
+      </ul>
+      <p class="hw-product-body r d4">
+        If you're interested, let's have a chat to see how this technology can fit your needs.
+      </p>
+      <div class="r d4">
+        <button class="btn-outline-dark" onclick="openModal()">Request a Demo</button>
       </div>
-
     </div>
   </div>
-
 </section>
 
 
 <!-- ══════════════════════════════
-     PRIVATE AI SERVERS — scroll-scrub video (reverse)
+     PRIVATE AI SERVERS — STATIC BACKGROUND
 ══════════════════════════════ -->
 <section id="servers">
-
-  <!-- Sticky pin — same pattern as workstation -->
-  <div class="srv-pin" id="srvPin">
-    <div class="srv-pin-inner">
-
-      <canvas id="srvCanvas" class="seq-canvas"></canvas>
-
-      <!-- Reveal panel: info only, same layout as workstation -->
-      <div class="srv-reveal" id="srvReveal">
-        <div class="ws-info-inner">
-          <h2 class="hw-product-title">Private AI Servers</h2>
-          <p class="hw-product-body">
-            For organizations that need to scale. We deploy and optimize AI inference
-            infrastructure on your own servers, multi-GPU racks built for throughput,
-            reliability, and full data sovereignty.
-          </p>
-          <ul class="hw-bullets">
-            <li>Multi-GPU rack servers</li>
-            <li>Optimized inference engines</li>
-            <li>Full data sovereignty</li>
-            <li>Scalable to your needs</li>
-          </ul>
-          <p class="hw-product-body">
-            Whether you're running RAG pipelines, coding assistants, or custom AI
-            applications, we'll help you find the right configuration and get the
-            most out of such infrastructure.
-          </p>
-          <button class="btn-primary" onclick="openModal()">Contact Us</button>
-        </div>
+  <div class="srv-bg"></div>
+  <div class="srv-overlay"></div>
+  <div class="srv-inner">
+    <div class="srv-content">
+      <span class="section-tag r">002 / Product</span>
+      <h2 class="hw-product-title r d1">Private AI Servers</h2>
+      <p class="hw-product-body r d2">
+        For organizations that need to scale. We deploy and optimize AI inference
+        infrastructure on your own servers, multi-GPU racks built for throughput,
+        reliability, and full data sovereignty.
+      </p>
+      <ul class="hw-bullets r d3">
+        <li>Multi-GPU rack servers</li>
+        <li>Optimized inference engines</li>
+        <li>Full data sovereignty</li>
+        <li>Scalable to your needs</li>
+      </ul>
+      <p class="hw-product-body r d4">
+        Whether you're running RAG pipelines, coding assistants, or custom AI
+        applications, we'll help you find the right configuration and get the
+        most out of such infrastructure.
+      </p>
+      <div class="r d4">
+        <button class="btn-primary" onclick="openModal()">Contact Us</button>
       </div>
-
     </div>
   </div>
-
 </section>
 
 
@@ -255,9 +241,6 @@
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 <script src="js/main.js"></script>
-<script src="js/hardware.js"></script>
 </body>
 </html>

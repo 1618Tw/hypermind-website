@@ -5,7 +5,7 @@
 /* ─── HERO ──────────────────────────────────────────────── */
 #hero {
   min-height: 100svh;
-  background: var(--dark);
+  background: var(--cream);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   text-align: center;
@@ -16,8 +16,7 @@
 #hero::before {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse 80% 70% at 50% 50%,
-    rgba(255,107,75,.11) 0%, transparent 70%);
+  background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(255,107,75,.13) 0%, transparent 70%);
   pointer-events: none;
 }
 /* Grain texture */
@@ -37,14 +36,14 @@
 .hero-title {
   font-size: clamp(3.8rem, 10vw, 9.5rem);
   font-weight: 900; line-height: .93; letter-spacing: -.03em;
-  color: var(--cream); margin-bottom: 1.75rem;
+  color: var(--dark); margin-bottom: 1.75rem;
   opacity: 0; transform: translateY(28px);
   animation: fadeUp .85s ease forwards .5s;
 }
 .hero-title em { color: var(--coral); font-style: normal; }
 .hero-sub {
   font-size: clamp(.95rem, 1.8vw, 1.2rem); font-weight: 400;
-  color: rgba(255,168,134,.8); line-height: 1.65;
+  color: rgba(57,8,30,.6); line-height: 1.65;
   max-width: 500px; margin-bottom: 3rem;
   opacity: 0; transform: translateY(22px);
   animation: fadeUp .85s ease forwards .7s;
@@ -56,6 +55,20 @@
 /* Home page scroll hint is centered bottom */
 .scroll-hint {
   bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+}
+
+/* ─── Logo: black on cream hero, white once nav scrolled ── */
+#nav .nav-logo img          { filter: none; }
+#nav.scrolled .nav-logo img { filter: brightness(0) invert(1); }
+
+/* ─── Button overrides for dark sections ────────────────── */
+#ubiq .btn-primary,
+#hardware .btn-primary {
+  color: var(--cream); border-color: rgba(255,248,224,.5);
+}
+#ubiq .btn-primary:hover,
+#hardware .btn-primary:hover {
+  background: var(--coral); border-color: var(--coral); color: var(--cream);
 }
 
 /* ─── PRODUCT: UBIQ ─────────────────────────────────────── */
@@ -109,7 +122,7 @@
 }
 .hw-bg {
   position: absolute; inset: 0;
-  background-image: url('../assets/hardware.png');
+  background-image: url('../assets/hardware.webp');
   background-size: cover; background-position: center;
   opacity: .55; transition: opacity 1s;
 }
@@ -238,6 +251,7 @@
   display: flex; gap: 5.5rem; align-items: center;
   animation: marquee 22s linear infinite;
   width: max-content;
+  will-change: transform;
 }
 .marquee-track:hover { animation-play-state: paused; }
 .sponsor-img {

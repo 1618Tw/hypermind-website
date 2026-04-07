@@ -1,0 +1,150 @@
+/* ═══════════════════════════════════════════════════════════
+   HYPERMIND — Open Roles Page  (open-roles.html only)
+═══════════════════════════════════════════════════════════ */
+
+/* ─── Navbar: black logo on cream, white when scrolled ──── */
+#nav .nav-logo img          { filter: none; }
+#nav.scrolled .nav-logo img { filter: brightness(0) invert(1); }
+
+/* ─── Navbar links: dark on cream ───────────────────────── */
+.nav-links a { color: rgba(57,8,30,.65); }
+.nav-links a:hover { color: var(--dark); }
+
+/* ─── HERO ──────────────────────────────────────────────── */
+#roles-hero {
+  min-height: 60svh;
+  background: var(--cream);
+  display: flex; align-items: flex-end;
+  padding: 0 4rem 6rem;
+  position: relative;
+  border-bottom: 1px solid rgba(57,8,30,.1);
+}
+#roles-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 20% 100%, rgba(255,107,75,.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+.roles-hero-inner {
+  max-width: 1200px; width: 100%; margin: 0 auto;
+  position: relative; z-index: 1;
+}
+.roles-label {
+  display: block; font-size: .68rem; letter-spacing: .26em;
+  text-transform: uppercase; color: var(--coral);
+  margin-bottom: 2rem;
+}
+.roles-title {
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 900; line-height: .92; letter-spacing: -.03em;
+  color: var(--dark); margin-bottom: 2rem;
+}
+.roles-title em { color: var(--coral); font-style: normal; }
+.roles-sub {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: rgba(57,8,30,.55); line-height: 1.65;
+  max-width: 480px;
+}
+
+/* ─── ROLES LIST ────────────────────────────────────────── */
+#roles-list {
+  background: var(--cream);
+  padding: 5rem 4rem 6rem;
+}
+.roles-inner {
+  max-width: 1200px; margin: 0 auto;
+}
+.roles-meta {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 3rem;
+}
+.roles-count {
+  font-size: .68rem; letter-spacing: .22em; text-transform: uppercase;
+  color: rgba(57,8,30,.4); font-weight: 600;
+}
+.roles-location {
+  font-size: .78rem; color: rgba(57,8,30,.35); letter-spacing: .06em;
+}
+.roles-divider {
+  height: 1px; background: rgba(57,8,30,.12);
+}
+.role-row {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 2.25rem 0;
+  text-decoration: none;
+  transition: padding-left .3s ease;
+  cursor: pointer;
+}
+.role-row:hover { padding-left: 1rem; }
+.role-row:hover .role-arrow { transform: translateX(6px); }
+.role-row:hover .role-title  { color: var(--coral); }
+.role-info {
+  display: flex; align-items: center; gap: 2rem;
+}
+.role-number {
+  font-size: .68rem; letter-spacing: .18em; color: rgba(57,8,30,.28);
+  font-weight: 700; flex-shrink: 0; width: 2rem;
+}
+.role-title {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 800; letter-spacing: -.02em;
+  color: var(--dark); margin-bottom: .5rem;
+  transition: color .25s;
+}
+.role-tags {
+  display: flex; gap: .5rem; flex-wrap: wrap;
+}
+.role-tag {
+  font-size: .62rem; letter-spacing: .16em; text-transform: uppercase;
+  color: rgba(57,8,30,.4); font-weight: 600;
+  border: 1px solid rgba(57,8,30,.18);
+  padding: .2rem .65rem; border-radius: 999px;
+}
+.role-cta {
+  font-size: .78rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--dark);
+  display: flex; align-items: center; gap: .5rem;
+  flex-shrink: 0;
+}
+.role-arrow {
+  display: inline-block; transition: transform .25s ease;
+}
+
+/* ─── BOTTOM CTA ────────────────────────────────────────── */
+#roles-cta {
+  background: var(--dark);
+  padding: 9rem 4rem;
+  text-align: center;
+}
+.roles-cta-inner {
+  max-width: 640px; margin: 0 auto;
+}
+.roles-cta-label {
+  font-size: .68rem; letter-spacing: .26em; text-transform: uppercase;
+  color: var(--coral); margin-bottom: 1.5rem;
+}
+.roles-cta-title {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 900; line-height: 1.0; letter-spacing: -.025em;
+  color: var(--cream); margin-bottom: 2.5rem;
+}
+#roles-cta .btn-primary {
+  color: var(--cream); border-color: rgba(255,248,224,.45);
+}
+#roles-cta .btn-primary:hover {
+  background: var(--coral); border-color: var(--coral); color: var(--cream);
+}
+
+/* ─── Responsive ────────────────────────────────────────── */
+@media (max-width: 900px) {
+  #roles-hero  { padding: 0 1.6rem 5rem; min-height: 50svh; }
+  #roles-list  { padding: 4rem 1.6rem; }
+  #roles-cta   { padding: 6rem 1.6rem; }
+  .roles-meta  { flex-direction: column; gap: .5rem; }
+  .role-info   { gap: 1.2rem; }
+  .role-cta    { display: none; }
+}
+@media (max-width: 560px) {
+  .role-number { display: none; }
+  .role-row:hover { padding-left: 0; }
+}

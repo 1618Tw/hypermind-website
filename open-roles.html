@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Roles — Hypermind</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,100..900;1,75..125,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/open-roles.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════ -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/Hypermind2.png" alt="Hypermind" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#lab">LAB</a></li>
+    <li><a href="open-roles.html" class="active">Open Roles</a></li>
+    <li><a href="hardware.html">Hardware</a></li>
+    <li><a href="ubiq.html">UBIQ</a></li>
+  </ul>
+  <button class="btn-nav" onclick="openModal()">Contact Us</button>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════ -->
+<section id="roles-hero">
+  <div class="roles-hero-inner">
+    <span class="roles-label r">005 / Careers</span>
+    <h1 class="roles-title r d1">Join the<br><em>revolution.</em></h1>
+    <p class="roles-sub r d2">
+      We're building the future of local AI. If you refuse to compromise
+      on what technology should be, you belong here.
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     OPEN ROLES LIST
+══════════════════════════════════════════════════ -->
+<section id="roles-list">
+  <div class="roles-inner">
+
+    <div class="roles-meta r">
+      <p class="roles-count">2 open positions</p>
+      <p class="roles-location">Paris, France — Hybrid</p>
+    </div>
+
+    <div class="roles-divider"></div>
+
+    <!-- Role row -->
+    <a href="#" class="role-row r">
+      <div class="role-info">
+        <span class="role-number">01</span>
+        <div>
+          <h2 class="role-title">Senior Full-Stack Developer</h2>
+          <p class="role-tags">
+            <span class="role-tag">Full-Time</span>
+            <span class="role-tag">Engineering</span>
+          </p>
+        </div>
+      </div>
+      <span class="role-cta">Apply <span class="role-arrow">→</span></span>
+    </a>
+
+    <div class="roles-divider"></div>
+
+    <!-- Role row -->
+    <a href="#" class="role-row r d1">
+      <div class="role-info">
+        <span class="role-number">02</span>
+        <div>
+          <h2 class="role-title">AI Research Scientist Intern</h2>
+          <p class="role-tags">
+            <span class="role-tag">Internship</span>
+            <span class="role-tag">Research</span>
+          </p>
+        </div>
+      </div>
+      <span class="role-cta">Apply <span class="role-arrow">→</span></span>
+    </a>
+
+    <div class="roles-divider"></div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     BOTTOM CTA
+══════════════════════════════════════════════════ -->
+<section id="roles-cta">
+  <div class="roles-cta-inner r">
+    <p class="roles-cta-label">Don't see your role?</p>
+    <h2 class="roles-cta-title">We always want to<br>meet exceptional people.</h2>
+    <button class="btn-primary" onclick="openModal()">Get in Touch</button>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" class="footer-brand-logo" alt="Hypermind" />
+        <p>Building sovereign intelligence for the ones who refuse to let others own their data, their future, their AI.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="index.html#lab">LAB</a></li>
+          <li><a href="open-roles.html">Open Roles</a></li>
+          <li><a href="index.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="ubiq.html">UBIQ</a></li>
+          <li><a href="hardware.html">Hardware</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@hypermind.ai">hello@hypermind.ai</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-big">
+      <svg id="footer-svg" viewBox="0 0 1000 160" xmlns="http://www.w3.org/2000/svg"
+           onmouseenter="fhOn(true)" onmouseleave="fhOn(false)" onmousemove="fhMove(event)">
+        <defs>
+          <radialGradient id="fhReveal" gradientUnits="userSpaceOnUse" r="240" cx="500" cy="80">
+            <stop offset="0%"   stop-color="white"/>
+            <stop offset="100%" stop-color="black"/>
+          </radialGradient>
+          <mask id="fhMask">
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#fhReveal)"/>
+          </mask>
+          <linearGradient id="fhGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#FF6B4B"/>
+            <stop offset="50%"  stop-color="#FFA886"/>
+            <stop offset="100%" stop-color="#FF6B4B"/>
+          </linearGradient>
+        </defs>
+        <text x="50%" y="75%" text-anchor="middle" dominant-baseline="middle"
+              font-size="145" font-weight="900" font-family="Archivo,sans-serif"
+              fill="none" stroke="rgba(255,248,224,.055)" stroke-width="0.5" letter-spacing="-3">HYPERMIND</text>
+        <text id="fh-hover" x="50%" y="75%" text-anchor="middle" dominant-baseline="middle"
+              font-size="145" font-weight="900" font-family="Archivo,sans-serif"
+              fill="none" stroke="url(#fhGrad)" stroke-width="0.5"
+              mask="url(#fhMask)" opacity="0" letter-spacing="-3"
+              style="transition: opacity .3s">HYPERMIND</text>
+      </svg>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Hypermind. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════════════
+     CONTACT MODAL
+══════════════════════════════════════════════════ -->
+<div class="modal-bg" id="modal-bg" onclick="closeModalOut(event)">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal()">×</button>
+    <h2>Let's Talk.</h2>
+    <p>Tell us about your project and we'll get back to you shortly.</p>
+    <form onsubmit="sendForm(event)">
+      <div class="form-row">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Doe" required />
+      </div>
+      <div class="form-row">
+        <label>Email</label>
+        <input type="email" placeholder="you@company.com" required />
+      </div>
+      <div class="form-row">
+        <label>Message</label>
+        <textarea placeholder="What are you working on?" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;margin-top:.5rem;">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Lab — Hypermind</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,100..900;1,75..125,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/lab.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════════ -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="assets/Hypermind2.png" alt="Hypermind" />
+  </a>
+  <ul class="nav-links">
+    <li><a href="lab.html" class="active">LAB</a></li>
+    <li><a href="open-roles.html">Open Roles</a></li>
+    <li><a href="hardware.html">Hardware</a></li>
+    <li><a href="ubiq.html">UBIQ</a></li>
+  </ul>
+  <button class="btn-nav" onclick="openModal()">Contact Us</button>
+</nav>
+
+
+<!-- ══════════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════════ -->
+<section id="lab-hero">
+  <div class="lab-hero-inner">
+    <div class="lab-hero-top">
+      <span class="lab-label lab-fade" style="--i:0">005 / The Lab</span>
+      <span class="lab-count lab-fade" style="--i:1">3 publications</span>
+    </div>
+    <h1 class="lab-hero-title lab-fade" style="--i:2">
+      Where ideas<br>become <em>intelligence.</em>
+    </h1>
+    <p class="lab-hero-sub lab-fade" style="--i:3">
+      Research, discoveries and experiments from the Hypermind team.
+      Everything we learn, we share.
+    </p>
+  </div>
+  <div class="lab-hero-scroll lab-fade" style="--i:4">
+    <div class="lab-scroll-line"></div>
+    <span>Scroll to explore</span>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     ENTRY 01 — Paper (dark)
+══════════════════════════════════════════════════ -->
+<article class="lab-entry lab-entry--dark" id="entry-01">
+  <div class="lab-entry-inner">
+
+    <div class="lab-entry-header lab-reveal">
+      <span class="lab-entry-type">Paper</span>
+      <span class="lab-entry-date">March 2026</span>
+    </div>
+
+    <div class="lab-entry-body">
+      <div class="lab-entry-number lab-reveal" style="--delay:.05s">01</div>
+      <div class="lab-entry-content">
+        <div class="lab-accent-line lab-line-reveal" style="--delay:.1s"></div>
+        <h2 class="lab-entry-title lab-reveal" style="--delay:.15s">
+          Quantization at the Edge: Running 70B Models on Consumer Hardware
+        </h2>
+        <p class="lab-entry-excerpt lab-reveal" style="--delay:.22s">
+          We document our findings deploying large language models on off-the-shelf
+          workstations with no cloud dependency. The results challenge the assumption
+          that sovereign AI requires enterprise-grade infrastructure.
+        </p>
+        <a href="#" class="lab-entry-link lab-reveal" style="--delay:.28s">
+          <span>Read the paper</span>
+          <span class="lab-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+
+<!-- ══════════════════════════════════════════════════
+     ENTRY 02 — Discovery (cream)
+══════════════════════════════════════════════════ -->
+<article class="lab-entry lab-entry--light" id="entry-02">
+  <div class="lab-entry-inner">
+
+    <div class="lab-entry-header lab-reveal">
+      <span class="lab-entry-type">Discovery</span>
+      <span class="lab-entry-date">January 2026</span>
+    </div>
+
+    <div class="lab-entry-body">
+      <div class="lab-entry-number lab-reveal" style="--delay:.05s">02</div>
+      <div class="lab-entry-content">
+        <div class="lab-accent-line lab-line-reveal" style="--delay:.1s"></div>
+        <h2 class="lab-entry-title lab-reveal" style="--delay:.15s">
+          Attention Head Pruning Without Performance Loss
+        </h2>
+        <p class="lab-entry-excerpt lab-reveal" style="--delay:.22s">
+          A counterintuitive finding from our inference optimisation research:
+          removing up to 30% of attention heads in specific layers produces no
+          measurable degradation on reasoning benchmarks, while reducing memory
+          footprint significantly.
+        </p>
+        <a href="#" class="lab-entry-link lab-reveal" style="--delay:.28s">
+          <span>Read the discovery</span>
+          <span class="lab-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+
+<!-- ══════════════════════════════════════════════════
+     ENTRY 03 — Experiment (dark)
+══════════════════════════════════════════════════ -->
+<article class="lab-entry lab-entry--dark" id="entry-03">
+  <div class="lab-entry-inner">
+
+    <div class="lab-entry-header lab-reveal">
+      <span class="lab-entry-type">Experiment</span>
+      <span class="lab-entry-date">November 2025</span>
+    </div>
+
+    <div class="lab-entry-body">
+      <div class="lab-entry-number lab-reveal" style="--delay:.05s">03</div>
+      <div class="lab-entry-content">
+        <div class="lab-accent-line lab-line-reveal" style="--delay:.1s"></div>
+        <h2 class="lab-entry-title lab-reveal" style="--delay:.15s">
+          Local RAG Pipelines: Eight Architectures, One Benchmark
+        </h2>
+        <p class="lab-entry-excerpt lab-reveal" style="--delay:.22s">
+          We designed and ran a systematic benchmark comparing eight retrieval-augmented
+          generation architectures operating entirely on local hardware. This experiment
+          maps the trade-offs between latency, accuracy and memory footprint for
+          on-premise deployments.
+        </p>
+        <a href="#" class="lab-entry-link lab-reveal" style="--delay:.28s">
+          <span>Explore the experiment</span>
+          <span class="lab-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</article>
+
+
+<!-- ══════════════════════════════════════════════════
+     APPENDIX — full index
+══════════════════════════════════════════════════ -->
+<section id="lab-appendix">
+  <div class="appendix-inner">
+
+    <div class="appendix-header lab-reveal">
+      <h2 class="appendix-title">All Publications</h2>
+      <span class="appendix-tag">Appendix</span>
+    </div>
+
+    <div class="appendix-divider"></div>
+
+    <a href="#entry-01" class="appendix-row lab-reveal" style="--delay:.06s">
+      <span class="appendix-num">01</span>
+      <span class="appendix-type">Paper</span>
+      <span class="appendix-name">Quantization at the Edge: Running 70B Models on Consumer Hardware</span>
+      <span class="appendix-date">Mar 2026</span>
+    </a>
+
+    <div class="appendix-divider lab-reveal" style="--delay:.09s"></div>
+
+    <a href="#entry-02" class="appendix-row lab-reveal" style="--delay:.12s">
+      <span class="appendix-num">02</span>
+      <span class="appendix-type">Discovery</span>
+      <span class="appendix-name">Attention Head Pruning Without Performance Loss</span>
+      <span class="appendix-date">Jan 2026</span>
+    </a>
+
+    <div class="appendix-divider lab-reveal" style="--delay:.15s"></div>
+
+    <a href="#entry-03" class="appendix-row lab-reveal" style="--delay:.18s">
+      <span class="appendix-num">03</span>
+      <span class="appendix-type">Experiment</span>
+      <span class="appendix-name">Local RAG Pipelines: Eight Architectures, One Benchmark</span>
+      <span class="appendix-date">Nov 2025</span>
+    </a>
+
+    <div class="appendix-divider lab-reveal" style="--delay:.21s"></div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" class="footer-brand-logo" alt="Hypermind" />
+        <p>Building sovereign intelligence for the ones who refuse to let others own their data, their future, their AI.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="lab.html">LAB</a></li>
+          <li><a href="open-roles.html">Open Roles</a></li>
+          <li><a href="index.html">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <ul>
+          <li><a href="ubiq.html">UBIQ</a></li>
+          <li><a href="hardware.html">Hardware</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:hello@hypermind.ai">hello@hypermind.ai</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter / X</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-big">
+      <svg id="footer-svg" viewBox="0 0 1000 160" xmlns="http://www.w3.org/2000/svg"
+           onmouseenter="fhOn(true)" onmouseleave="fhOn(false)" onmousemove="fhMove(event)">
+        <defs>
+          <radialGradient id="fhReveal" gradientUnits="userSpaceOnUse" r="240" cx="500" cy="80">
+            <stop offset="0%"   stop-color="white"/>
+            <stop offset="100%" stop-color="black"/>
+          </radialGradient>
+          <mask id="fhMask">
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#fhReveal)"/>
+          </mask>
+          <linearGradient id="fhGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#FF6B4B"/>
+            <stop offset="50%"  stop-color="#FFA886"/>
+            <stop offset="100%" stop-color="#FF6B4B"/>
+          </linearGradient>
+        </defs>
+        <text x="50%" y="75%" text-anchor="middle" dominant-baseline="middle"
+              font-size="145" font-weight="900" font-family="Archivo,sans-serif"
+              fill="none" stroke="rgba(255,248,224,.055)" stroke-width="0.5" letter-spacing="-3">HYPERMIND</text>
+        <text id="fh-hover" x="50%" y="75%" text-anchor="middle" dominant-baseline="middle"
+              font-size="145" font-weight="900" font-family="Archivo,sans-serif"
+              fill="none" stroke="url(#fhGrad)" stroke-width="0.5"
+              mask="url(#fhMask)" opacity="0" letter-spacing="-3"
+              style="transition: opacity .3s">HYPERMIND</text>
+      </svg>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 Hypermind. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════════════════
+     CONTACT MODAL
+══════════════════════════════════════════════════ -->
+<div class="modal-bg" id="modal-bg" onclick="closeModalOut(event)">
+  <div class="modal">
+    <button class="modal-x" onclick="closeModal()">×</button>
+    <h2>Let's Talk.</h2>
+    <p>Tell us about your project and we'll get back to you shortly.</p>
+    <form onsubmit="sendForm(event)">
+      <div class="form-row">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Doe" required />
+      </div>
+      <div class="form-row">
+        <label>Email</label>
+        <input type="email" placeholder="you@company.com" required />
+      </div>
+      <div class="form-row">
+        <label>Message</label>
+        <textarea placeholder="What are you working on?" required></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%;margin-top:.5rem;">
+        Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/lab.js"></script>
+</body>
+</html>

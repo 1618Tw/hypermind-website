@@ -42,7 +42,14 @@ document.addEventListener('keydown', e => {
 // they enter the viewport, triggering their CSS transition.
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('on');
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    el.style.willChange = 'transform, opacity';
+    el.classList.add('on');
+    el.addEventListener('transitionend', () => {
+      el.style.willChange = 'auto';
+    }, { once: true });
+    revealObserver.unobserve(el);
   });
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
@@ -59,9 +66,14 @@ const fhGrad = document.getElementById('fhReveal');
 function fhOn(state) {
   if (fhEl) fhEl.style.opacity = state ? '1' : '0';
 }
+let fhRaf = null;
 function fhMove(e) {
   if (!fhSvg || !fhGrad) return;
-  const rect = fhSvg.getBoundingClientRect();
-  fhGrad.setAttribute('cx', ((e.clientX - rect.left)  / rect.width)  * 1000);
-  fhGrad.setAttribute('cy', ((e.clientY - rect.top)   / rect.height) * 160);
+  if (fhRaf) return;
+  fhRaf = requestAnimationFrame(() => {
+    const rect = fhSvg.getBoundingClientRect();
+    fhGrad.setAttribute('cx', ((e.clientX - rect.left)  / rect.width)  * 1000);
+    fhGrad.setAttribute('cy', ((e.clientY - rect.top)   / rect.height) * 160);
+    fhRaf = null;
+  });
 }
